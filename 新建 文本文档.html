@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    抽取10位幸运号码: <input type="text" name="" id="inputVal"><br>
+    幸运号码最大值：<input type="text" name="" id="valMax">
+    <button class="btn">抽取幸运号码</button>
+    <button class="btn01">最大值</button>
+    <button class="quit">退出</button>
+</body>
+
+</html>
+<script>
+
+    var inputVal = document.querySelector('#inputVal')
+    inputVal.style.width = '131px'
+    var btn = document.querySelector('.btn')
+    btn.addEventListener('click', function () {
+        var myarray = ''
+        for (let index = 0; index < 10; index++) {
+            let num = Math.floor(Math.random() * (100) + 1)
+            myarray += num += ','
+        }
+        inputVal.value = myarray
+    })
+
+    var btn01 = document.querySelector('.btn01')
+    var valMax = document.querySelector('#valMax')
+    btn01.addEventListener('click', function () {
+        var new01 = inputVal.value.split(',')
+        // console.log(new01.length-1);
+        valMax.value = Math.max(...new01)
+    })
+    document.querySelector('.quit').addEventListener('click', function () {
+        inputVal.value = ''
+        valMax.value = ''
+        alert('您的数据已清空!')
+    })
+</script>

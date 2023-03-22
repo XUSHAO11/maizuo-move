@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_film"]=self["webpackChunkvue_film"]||[]).push([[172],{2172:function(n,u,e){e.r(u),e.d(u,{default:function(){return c}});var l=function(){var n=this,u=n._self._c;return u("div",[u("YingPian")],1)},i=[],t=e(1299),f={components:{YingPian:t["default"]}},r=f,s=e(1001),a=(0,s.Z)(r,l,i,!1,null,null,null),c=a.exports}}]);
+//# sourceMappingURL=172.4fa874e7.js.map

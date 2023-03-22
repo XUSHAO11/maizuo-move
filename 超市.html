@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超市</title>
+    购物款：<input type="text" name="" id="gw">
+    应付款：<input type="text" name="" id="yf">
+    <button class="btn">计算</button>
+</head>
+
+<body>
+
+</body>
+<script>
+    document.querySelector('.btn').addEventListener('click', function () {
+        var gw = document.querySelector('#gw').value
+        var istrue = true;
+        if (gw < 100 && gw > 0) {
+            istrue = gw
+        } else if (gw >= 100 && gw < 500) {
+            istrue = gw * 0.95
+        } else if (gw >= 500 && gw < 1000) {
+            istrue = gw * 0.92
+        } else if (gw >= 1000 && gw < 3000) {
+            istrue = gw * 0.9
+        } else {
+            istrue = gw * 0.85
+        }
+        document.querySelector('#yf').value=istrue
+    })
+</script>
+
+</html>
